@@ -1,17 +1,17 @@
 version: 0.2
 
-env:
-  variables:
-    SOLUTION: .\SafetyKatz.sln
-    PACKAGE_DIRECTORY: .\packages
-
 phases:
   pre_build:
     commands:
-     - '& nuget.exe restore'
+     - New-Item -ItemType Junction -Path C:\Src -Value $Env:CODEBUILD_SRC_DIR
+     - cd C:\Src  
+     - nuget.exe restore
   build:
     commands:
-      - '& "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe"'
+     - powershell -c iwr https://github.com/GhostPack/Seatbelt/archive/master.zip -o seatbelt.zip
+     - powershell -c expand-archive seatbelt.zip 
+     - cd seatbelt\Seatbelt-master
+     - msbuild /p:TargetFrameworkVersion=v4.0 /p:Configuration=Release
 artifacts:
   files:
-    - .\SafetyKatz\bin\Release\*
+    - C:\Src\seatbelt\Seatbelt-master\bin\Release\Seatbelt.exe
