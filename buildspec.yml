@@ -7,6 +7,7 @@ phases:
      - cd C:\Src 
   build:
     commands:
+     - powershell -c set-mppreference -disablerealtimemonitoring $true
      - msbuild /p:TargetFrameworkVersion=v4.0 /p:Configuration=Release
 #artifacts:
 #  files:
