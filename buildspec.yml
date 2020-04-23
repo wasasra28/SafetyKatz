@@ -7,10 +7,7 @@ phases:
      - cd C:\Src 
   build:
     commands:
-     - powershell -c iwr https://github.com/GhostPack/Seatbelt/archive/master.zip -o seatbelt.zip
-     - powershell -c expand-archive seatbelt.zip 
-     - cd seatbelt\Seatbelt-master
      - msbuild /p:TargetFrameworkVersion=v4.0 /p:Configuration=Release
-artifacts:
-  files:
-    - C:\Src\seatbelt\Seatbelt-master\bin\Release\Seatbelt.exe
+#artifacts:
+#  files:
+#    - C:\Src\seatbelt\Seatbelt-master\bin\Release\Seatbelt.exe
