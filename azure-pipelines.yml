@@ -25,7 +25,7 @@ steps:
     downloadType: 'single'
     artifactName: 'neo-ConfuserEx'
     downloadPath: '$(System.ArtifactsDirectory)'
-    
+
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
@@ -42,6 +42,10 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: CmdLine@2
+  inputs:
+    script: 'd:\a\1\a\neo-ConfuserEx\Release\bin\Confuser.CLI.exe d:\a\1\s\SafetyKatz\SafetyKatz.crproj'
 
 - task: CopyFiles@2
   inputs:
