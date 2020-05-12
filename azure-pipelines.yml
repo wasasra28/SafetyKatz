@@ -15,6 +15,17 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- task: DownloadBuildArtifacts@0
+  inputs:
+    buildType: 'specific'
+    project: '419a3337-a65d-4315-bb59-6cda224f476a'
+    pipeline: '9'
+    buildVersionToDownload: 'specific'
+    buildId: '42'
+    downloadType: 'single'
+    artifactName: 'neo-ConfuserEx'
+    downloadPath: '$(System.ArtifactsDirectory)'
+    
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
