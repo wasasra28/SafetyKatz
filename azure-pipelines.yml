@@ -49,16 +49,16 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'rename d:\a\1\s\SafetyKatz\bin\Release\confused\bin\Release\SafetyKatz.exe SafetyKatz_confused.exe'
+    script: 'rename d:\a\1\s\$(projectName)\bin\Release\confused\bin\Release\$(projectName).exe $(projectName)_confused.exe'
 
 - task: CopyFiles@2
   inputs:
-    Contents: 'SafetyKatz\bin\Release\**'
+    Contents: '$(projectName)\bin\Release\**'
     TargetFolder: '$(build.artifactstagingdirectory)'
     flattenFolders: 'true'
 
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'SafetyKatz'
+    ArtifactName: '$(projectName)'
     publishLocation: 'Container'
