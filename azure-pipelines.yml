@@ -48,7 +48,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'rename d:\a\1\s\SafetyKatz\bin\Release\confused\bin\Release\SafetyKatz.exe d:\a\1\s\SafetyKatz\bin\Release\confused\bin\Release\SafetyKatz_confused.exe'
+    script: 'rename d:\a\1\s\SafetyKatz\bin\Release\confused\bin\Release\SafetyKatz.exe SafetyKatz_confused.exe'
 
 - task: CopyFiles@2
   inputs:
