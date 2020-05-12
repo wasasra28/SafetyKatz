@@ -49,6 +49,7 @@ steps:
 - task: CopyFiles@2
   inputs:
     Contents: 'SafetyKatz\bin\Release\**'
+    CleanTargetFolder: 'true'
     TargetFolder: '$(build.artifactstagingdirectory)'
 
 - task: PublishBuildArtifacts@1
