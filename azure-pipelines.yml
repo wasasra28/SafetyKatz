@@ -50,6 +50,7 @@ steps:
   inputs:
     Contents: 'SafetyKatz\bin\Release\**'
     TargetFolder: '$(build.artifactstagingdirectory)'
+    flattenFolders: 'true'
 
 - task: PublishBuildArtifacts@1
   inputs:
