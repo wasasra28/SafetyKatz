@@ -32,14 +32,6 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: DownloadGitHubRelease@0
-  inputs:
-    connection: 'github.com_wasasra28'
-    userRepository: 'wasasra28/neo-ConfuserEx'
-    defaultVersionType: 'specificVersion'
-    version: '1.0.0'
-    downloadPath: '$(build.artifactstagingdirectory)'
-
 - task: CopyFiles@2
   inputs:
     Contents: '**'
