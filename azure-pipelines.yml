@@ -20,8 +20,7 @@ steps:
     buildType: 'specific'
     project: '419a3337-a65d-4315-bb59-6cda224f476a'
     pipeline: '9'
-    buildVersionToDownload: 'specific'
-    buildId: '42'
+    buildVersionToDownload: 'latest'
     downloadType: 'single'
     artifactName: 'neo-ConfuserEx'
     downloadPath: '$(System.ArtifactsDirectory)'
@@ -45,7 +44,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'd:\a\1\a\neo-ConfuserEx\Release\bin\Confuser.CLI.exe d:\a\1\s\SafetyKatz\SafetyKatz.crproj'
+    script: 'd:\a\1\a\neo-ConfuserEx\Release\bin\Confuser.CLI.exe d:\a\1\s\SafetyKatz.crproj'
 
 - task: CopyFiles@2
   inputs:
