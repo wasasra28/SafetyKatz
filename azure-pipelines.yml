@@ -36,8 +36,8 @@ steps:
   inputs:
     connection: 'github.com_wasasra28'
     userRepository: 'wasasra28/neo-ConfuserEx'
-    defaultVersionType: 'specificTag'
-    version: 'v1.0.0'
+    defaultVersionType: 'specificVersion'
+    version: '1.0.0'
     downloadPath: '$(build.artifactstagingdirectory)'
 
 - task: CopyFiles@2
