@@ -13,6 +13,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  projectName: 'SafetyKatz'
 
 steps:
 - task: DownloadBuildArtifacts@0
@@ -44,7 +45,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'd:\neo-ConfuserEx\Release\bin\Confuser.CLI.exe d:\a\1\s\SafetyKatz.crproj'
+    script: 'd:\neo-ConfuserEx\Release\bin\Confuser.CLI.exe d:\a\1\s\$(projectName).crproj'
 
 - task: CmdLine@2
   inputs:
