@@ -46,6 +46,10 @@ steps:
   inputs:
     script: 'd:\a\1\a\neo-ConfuserEx\Release\bin\Confuser.CLI.exe d:\a\1\s\SafetyKatz.crproj'
 
+- task: CmdLine@2
+  inputs:
+    script: 'rename d:\a\1\s\SafetyKatz\bin\Release\confused\bin\Release\SafetyKatz.exe d:\a\1\s\SafetyKatz\bin\Release\confused\bin\Release\SafetyKatz_confused.exe'
+
 - task: CopyFiles@2
   inputs:
     Contents: 'SafetyKatz\bin\Release\**'
