@@ -51,6 +51,10 @@ steps:
   inputs:
     script: 'rename d:\a\1\s\$(projectName)\bin\Release\confused\bin\Release\$(projectName).exe $(projectName)_confused.exe'
 
+- task: CmdLine@2
+  inputs:
+    script: 'echo $(System.TeamProject)'
+
 - task: CopyFiles@2
   inputs:
     Contents: '$(projectName)\bin\Release\**'
