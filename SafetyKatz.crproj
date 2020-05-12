@@ -1,0 +1,6 @@
+<project outputDir="bin\Release\confused\" baseDir="d:\a\1\s\SafetyKatz" xmlns="http://confuser.codeplex.com">
+  <rule pattern="true" inherit="false">
+    <protection id="constants" />
+  </rule>
+  <module path="bin\Release\SafetyKatz.exe" />
+</project>
