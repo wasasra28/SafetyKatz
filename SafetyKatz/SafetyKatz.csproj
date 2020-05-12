@@ -78,19 +78,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <PropertyGroup>
-    <Obfuscate>true</Obfuscate>
-    <ConfuserReplaceOutput>true</ConfuserReplaceOutput>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="mycrproj.crproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Confuser.MSBuild" Version="1.4.0-alpha-g52b6086527">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
 </Project>
