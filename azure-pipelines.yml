@@ -52,7 +52,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    Contents: 'SafetyKatz\bin\Release\**'
+    Contents: 'SafetyKatz/bin/Release/**'
     TargetFolder: '$(build.artifactstagingdirectory)'
     flattenFolders: 'true'
 
